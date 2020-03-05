@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<span class="container-sm">
+    <div class="row">
+        <div class="col">
+            <h3>Instructions</h3>
+            <p>Please select a country from the list or use the Geolocation icon to use your current location.</p>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-6">
+            <label for="country">Select your Country:</label>
+            <select class="custom-select" id="country"><option selected></option></select>
+        </div>
+        <div class="col-6">
+            <label for="location">Set your current location: </label>
+            <br />
+            <input id="location" type="image" src="~/Content/geolocalitation.png" onclick="getWeatherByLocation()" style="width:10%">
+        </div>
+    </div>
+    <div class="row-cols-1">
+        <br />
+        <button type="submit" class="btn btn-primary" onclick="getWeatherByCountry()">Check Weather</button>
+    </div>
+</span>
+<span class="container-sm">
+    <div id="weatherContent" /></div>
+    <div id="validations">
+    </div>
+
+</span>
